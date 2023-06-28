@@ -1,0 +1,17 @@
+.portfolio-content {
+  background-color: $light-background-color;
+}
+
+.buttons-part {
+  @extend %section;
+  padding-bottom: 0;
+
+  &__buttons-branch-list {
+    display: flex;
+    padding: 0 318px 50px 310px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

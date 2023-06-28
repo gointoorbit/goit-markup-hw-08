@@ -1,0 +1,42 @@
+.main-headline {
+  background-image: url(../images/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(47, 48, 58, 0.4);
+
+  &__container {
+    padding: 118px 57px;
+    background: transparent;
+
+    @media #{$tablet} {
+      padding: 118px 201px;
+    }
+    @media #{$desktop} {
+      max-width: 1600px;
+      width: 1200px;
+      padding: 200px 252px;
+    }
+  }
+  /* desktop
+  &__container {
+    max-width: 1600px;
+    padding: 200px 252px;
+    background: transparent;
+  }*/
+
+  &__text {
+    font-size: 26px;
+    line-height: 1.6;
+    font-weight: 900;
+    letter-spacing: 1.56px;
+    margin: 0 auto;
+    color: $dark-background-text-color;
+    text-align: center;
+
+    @media #{$desktop} {
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 2.64px;
+    }
+  }
+}

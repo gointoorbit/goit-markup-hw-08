@@ -1,0 +1,66 @@
+.social-media-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 30px;
+  gap: 10px;
+  display: none;
+
+  &__container {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--team {
+      background-color: $header-background-color;
+    }
+
+    &--footer {
+      background-color: $social-media-background-footer-color;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $logo-color-first;
+    }
+
+    &:hover .social-media-list__icon,
+    &:focus .social-media-list__icon {
+      fill: $header-background-color;
+    }
+  }
+
+  &__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--team {
+      fill: $social-media-icon-color;
+    }
+
+    &--footer {
+      fill: $dark-background-text-color;
+    }
+  }
+
+  &--mobile {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 48px;
+
+    &__link {
+      color: $logo-color-first;
+      font-size: 18px;
+      line-height: 1.22;
+      font-weight: 500;
+      letter-spacing: 0.36px;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:focus {
+        color: $headline-color;
+      }
+    }
+  }
+}

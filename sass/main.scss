@@ -1,0 +1,36 @@
+@import "./utils/vars";
+@import "./components/container";
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/logo";
+@import "./components/main-headline";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/form";
+@import "./components/section-lorem";
+@import "./components/section-coverage";
+@import "./components/section-team";
+@import "./components/social-media";
+@import "./components/section-clients";
+@import "./components/footer";
+@import "./components/buttons-list";
+@import "./components/products-section";
+@import "./components/mobile-menu";
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $text-color;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}

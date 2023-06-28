@@ -1,0 +1,23 @@
+$logo-color-first: #2196f3;
+$logo-color-second: #000000;
+$headline-color: #212121;
+$text-color: #757575;
+$dark-background-text-color: #ffffff;
+$header-background-color: #ffffff;
+$light-background-color: #e5e5e5;
+$team-background-color: #f5f4fa;
+$dark-background-color: #2f303a;
+$contact-details-color: rgba(255, 255, 255, 0.6);
+$branch-background-color: #eeeeee;
+$social-media-icon-color: #afb1b8;
+$social-media-background-footer-color: rgba(255, 255, 255, 0.1);
+$tablet: "(width >= 768px)";
+$desktop: "(width >= 1200px)";
+
+%text {
+  margin: 0 auto;
+}
+
+%section {
+  padding-block: 94px;
+}

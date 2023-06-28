@@ -1,0 +1,36 @@
+.lorem-ipsum-section {
+  display: none;
+  background-color: $light-background-color;
+  padding-block: 94px 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__window {
+    width: 270px;
+    background-color: $team-background-color;
+    padding: 25px 100px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__headline {
+    font-size: 14px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: $headline-color;
+    width: 270px;
+    margin: 0 0 10px;
+    padding-top: 30px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+    width: 270px;
+  }
+}
