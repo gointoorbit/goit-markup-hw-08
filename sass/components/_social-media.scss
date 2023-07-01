@@ -2,7 +2,7 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
-  padding: 0;
+  padding: 0 0 24px;
   gap: 10px;
 
   @media #{$desktop} {

@@ -41,10 +41,6 @@
       border-radius: 2px;
       position: absolute;
       bottom: -36px;
-
-      @media #{$desktop} {
-        bottom: -34px;
-      }
     }
   }
 
