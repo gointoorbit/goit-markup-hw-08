@@ -1,26 +1,52 @@
 .section-clients {
-  display: none;
-  @extend %section;
+  padding-block: 60px;
+
+  @media #{$desktop} {
+    padding-block: 94px;
+  }
+
+  &__container {
+    padding-inline: 15px;
+  }
 
   &__headline {
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.2;
     font-weight: 700;
+    letter-spacing: 0.84px;
     color: $headline-color;
     text-align: center;
-    margin-block: 0 50px;
-    padding-inline: 501px 498px;
+    margin-block: 0 30px;
+
+    @media #{$desktop} {
+      font-size: 36px;
+      letter-spacing: 1.08px;
+      margin-block: 0 50px;
+    }
   }
 
   &__clients-logo-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 30px;
+
+    @media #{$desktop} {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__client-list-item {
+    flex-basis: calc((100% - 30px) / 2);
+
+    @media #{$tablet} {
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
 
   &__client-logo-item {
-    width: 170px;
-    padding: 16px 32px;
+    padding-block: 16px;
+
     border: solid 1px $social-media-icon-color;
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,6 +63,8 @@
   }
 
   &__client-logo {
+    display: block;
+    margin: 0 auto;
     fill: $social-media-icon-color;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }

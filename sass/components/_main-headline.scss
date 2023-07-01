@@ -1,8 +1,34 @@
 .main-headline {
-  background-image: url(../images/background-image.jpg);
+  background-image: url(../images/hero-background-image-mobile@1x.jpg);
   background-position: center;
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(47, 48, 58, 0.4);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero-background-image-mobile@2x.jpg);
+  }
+
+  @media #{$tablet} {
+    background-image: url(../images/hero-background-image-tablet@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-background-image-tablet@2x.jpg);
+    }
+  }
+
+  @media #{$desktop} {
+    background-image: url(../images/hero-background-image-desktop@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-background-image-desktop@2x.jpg);
+    }
+  }
 
   &__container {
     padding: 118px 57px;
@@ -17,12 +43,6 @@
       padding: 200px 252px;
     }
   }
-  /* desktop
-  &__container {
-    max-width: 1600px;
-    padding: 200px 252px;
-    background: transparent;
-  }*/
 
   &__text {
     font-size: 26px;

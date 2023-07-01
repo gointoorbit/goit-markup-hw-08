@@ -3,8 +3,7 @@
 }
 
 .buttons-part {
-  @extend %section;
-  padding-bottom: 0;
+  padding-block: 94px;
 
   &__buttons-branch-list {
     display: flex;

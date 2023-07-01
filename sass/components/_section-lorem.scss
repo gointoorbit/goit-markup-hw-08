@@ -1,36 +1,66 @@
 .lorem-ipsum-section {
-  display: none;
-  background-color: $light-background-color;
-  padding-block: 94px 0;
+  background-color: $header-background-color;
+  padding-block: 60px;
+
+  @media #{$tablet} {
+    padding-block: 60px 45px;
+  }
+
+  @media #{$desktop} {
+    padding-block: 94px;
+  }
+
+  &__container {
+    padding-inline: 15px;
+  }
 
   &__list {
-    display: flex;
-    justify-content: space-around;
+    @media #{$tablet} {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    @media #{$desktop} {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    @media #{$tablet} {
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
 
   &__window {
-    width: 270px;
     background-color: $team-background-color;
-    padding: 25px 100px;
+    padding-block: 25px;
   }
 
   &__icon {
     fill: currentColor;
+    display: block;
+    margin: 0 auto;
   }
 
   &__headline {
     font-size: 14px;
     line-height: 1.1;
     font-weight: 700;
+    letter-spacing: 0.42px;
     color: $headline-color;
-    width: 270px;
-    margin: 0 0 10px;
-    padding-top: 30px;
+    margin-block: 30px 10px;
+    text-align: center;
+
+    @media #{$tablet} {
+      text-align: left;
+    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 1.7;
-    width: 270px;
+    letter-spacing: 0.42px;
+    margin: 0;
   }
 }

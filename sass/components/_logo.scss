@@ -1,13 +1,15 @@
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
-  /*desktop
-  font-size: 26px;*/
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.72px;
   color: $logo-color-second;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media #{$desktop} {
+    font-size: 26px;
+  }
 
   &__text {
     color: $logo-color-first;
@@ -20,6 +22,7 @@
 
   &.logo--footer {
     color: $dark-background-text-color;
+    margin-bottom: 20px;
 
     &:hover,
     &:focus {

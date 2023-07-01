@@ -40,7 +40,11 @@
       background-color: $logo-color-first;
       border-radius: 2px;
       position: absolute;
-      bottom: -34px;
+      bottom: -36px;
+
+      @media #{$desktop} {
+        bottom: -34px;
+      }
     }
   }
 

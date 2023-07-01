@@ -1,7 +1,11 @@
 .section-coverage {
   display: none;
-  @extend %section;
-  background-color: $light-background-color;
+
+  @media #{$desktop} {
+    display: block;
+    padding-block: 0 94px;
+    background-color: $header-background-color;
+  }
 
   &__headline {
     font-size: 36px;
@@ -37,6 +41,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     font-weight: 700;
-    @extend %text;
+    margin: 0 auto;
   }
 }

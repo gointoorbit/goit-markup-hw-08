@@ -294,7 +294,7 @@
       <section class="lorem-ipsum-section">
         <div class="lorem-ipsum-section__container container">
           <ul class="lorem-ipsum-section__list">
-            <li>
+            <li class="lorem-ipsum-section__item">
               <div class="lorem-ipsum-section__window">
                 <svg
                   class="lorem-ipsum-section__icon"
@@ -310,7 +310,7 @@
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="lorem-ipsum-section__item">
               <div class="lorem-ipsum-section__window">
                 <svg
                   class="lorem-ipsum-section__icon"
@@ -326,7 +326,7 @@
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="lorem-ipsum-section__item">
               <div class="lorem-ipsum-section__window">
                 <svg
                   class="lorem-ipsum-section__icon"
@@ -342,7 +342,7 @@
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="lorem-ipsum-section__item">
               <div class="lorem-ipsum-section__window">
                 <svg
                   class="lorem-ipsum-section__icon"
@@ -367,8 +367,9 @@
           <ul class="section-coverage__actions-list">
             <li class="section-coverage__action-item">
               <img
-                src="images/desktop.jpg"
+                src="images/desktop@1x.jpg"
                 alt="Tworzenie stron internetowych"
+                srcset="images/desktop@1x.jpg 1x, images/desktop@2x.jpg 2x"
                 width="370"
                 height="294"
               />
@@ -380,8 +381,9 @@
             </li>
             <li class="section-coverage__action-item">
               <img
-                src="images/laptop.jpg"
+                src="images/laptop@1x.jpg"
                 alt="Tworzenie aplikacji mobilnych"
+                srcset="images/laptop@1x.jpg 1x, images/laptop@2x.jpg 2x"
                 width="370"
                 height="294"
               />
@@ -393,8 +395,9 @@
             </li>
             <li class="section-coverage__action-item">
               <img
-                src="images/tablet.jpg"
+                src="images/tablet@1x.jpg"
                 alt="Projektowanie UX/UI"
+                srcset="images/tablet@1x.jpg 1x, images/tablet@2x.jpg 2x"
                 width="370"
                 height="294"
               />
@@ -412,12 +415,22 @@
           <h2 class="section-team__headline">Nasz zespół</h2>
           <ul class="section-team__people-list">
             <li class="section-team__team-member">
-              <img
-                src="images/team-first.jpg"
-                alt="Uśmiechnięty brunet w okularach"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <img
+                  src="images/team-first-mobile@1x.jpg"
+                  alt="Uśmiechnięty brunet w okularach"
+                  class="section-team__member-image"
+                />
+                <source srcset="images/team-first-mobile@2x.jpg 2x" />
+                <source
+                  media="#{$tablet}"
+                  srcset="images/team-first-tablet@2x.jpg 2x"
+                />
+                <source
+                  media="#{$desktop}"
+                  srcset="images/team-first-desktop@2x.jpg 2x"
+                />
+              </picture>
               <p class="section-team__member-name">John Doe</p>
               <p class="section-team__member-position">Product Designer</p>
               <ul class="social-media-list">
@@ -476,12 +489,33 @@
               </ul>
             </li>
             <li class="section-team__team-member">
-              <img
-                src="images/team-second.jpg"
-                alt="Uśmiechnięty blondynka w okularach"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <img
+                  src="images/team-second-mobile@1x.jpg"
+                  alt="Uśmiechnięty brunet w okularach"
+                  class="section-team__member-image"
+                />
+                <source
+                  srcset="
+                    images/team-second-mobile@1x.jpg 1x,
+                    images/team-second-mobile@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team-second-tablet@1x.jpg 1x,
+                    images/team-second-tablet@2x.jpg 2x
+                  "
+                  media="#{$tablet}"
+                />
+                <source
+                  srcset="
+                    images/team-second-desktop@1x.jpg 1x,
+                    images/team-second-desktop@2x.jpg 2x
+                  "
+                  media="#{$desktop}"
+                />
+              </picture>
               <p class="section-team__member-name">John Doe</p>
               <p class="section-team__member-position">Frontend Developer</p>
               <ul class="social-media-list">
@@ -540,12 +574,33 @@
               </ul>
             </li>
             <li class="section-team__team-member">
-              <img
-                src="images/team-third.jpg"
-                alt="Uśmiechnięty brunet"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <img
+                  src="images/team-third-mobile@1x.jpg"
+                  alt="Uśmiechnięty brunet w okularach"
+                  class="section-team__member-image"
+                />
+                <source
+                  srcset="
+                    images/team-third-mobile@1x.jpg 1x,
+                    images/team-third-mobile@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team-third-tablet@1x.jpg 1x,
+                    images/team-third-tablet@2x.jpg 2x
+                  "
+                  media="#{$tablet}"
+                />
+                <source
+                  srcset="
+                    images/team-third-desktop@1x.jpg 1x,
+                    images/team-third-desktop@2x.jpg 2x
+                  "
+                  media="#{$desktop}"
+                />
+              </picture>
               <p class="section-team__member-name">John Doe</p>
               <p class="section-team__member-position">Marketing</p>
               <ul class="social-media-list">
@@ -604,12 +659,33 @@
               </ul>
             </li>
             <li class="section-team__team-member">
-              <img
-                src="images/team-fourth.jpg"
-                alt="Brunet w okularach z brodą"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <img
+                  src="images/team-fourth-mobile@1x.jpg"
+                  alt="Uśmiechnięty brunet w okularach"
+                  class="section-team__member-image"
+                />
+                <source
+                  srcset="
+                    images/team-fourth-mobile@1x.jpg 1x,
+                    images/team-fourth-mobile@2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team-fourth-tablet@1x.jpg 1x,
+                    images/team-fourth-tablet@2x.jpg 2x
+                  "
+                  media="#{$tablet}"
+                />
+                <source
+                  srcset="
+                    images/team-fourth-desktop@1x.jpg 1x,
+                    images/team-fourth-desktop@2x.jpg 2x
+                  "
+                  media="#{$desktop}"
+                />
+              </picture>
               <p class="section-team__member-name">John Doe</p>
               <p class="section-team__member-position">UI Designer</p>
               <ul class="social-media-list">
@@ -674,7 +750,7 @@
         <div class="section-clients__container container">
           <h2 class="section-clients__headline">Nasi klienci</h2>
           <ul class="section-clients__clients-logo-list">
-            <li>
+            <li class="section-clients__client-list-item">
               <div class="section-clients__client-logo-item">
                 <svg
                   class="section-clients__client-logo"
@@ -685,7 +761,7 @@
                 </svg>
               </div>
             </li>
-            <li>
+            <li class="section-clients__client-list-item">
               <div class="section-clients__client-logo-item">
                 <svg
                   class="section-clients__client-logo"
@@ -696,7 +772,7 @@
                 </svg>
               </div>
             </li>
-            <li>
+            <li class="section-clients__client-list-item">
               <div class="section-clients__client-logo-item">
                 <svg
                   class="section-clients__client-logo"
@@ -707,7 +783,7 @@
                 </svg>
               </div>
             </li>
-            <li>
+            <li class="section-clients__client-list-item">
               <div class="section-clients__client-logo-item">
                 <svg
                   class="section-clients__client-logo"
@@ -718,7 +794,7 @@
                 </svg>
               </div>
             </li>
-            <li>
+            <li class="section-clients__client-list-item">
               <div class="section-clients__client-logo-item">
                 <svg
                   class="section-clients__client-logo"
@@ -729,7 +805,7 @@
                 </svg>
               </div>
             </li>
-            <li>
+            <li class="section-clients__client-list-item">
               <div class="section-clients__client-logo-item">
                 <svg
                   class="section-clients__client-logo"
@@ -746,82 +822,84 @@
     </main>
     <footer class="main-footer ending">
       <div class="main-footer__container container footer">
-        <div class="main-footer__contact-data">
-          <a class="main-footer__link logo logo--footer" href="./index.html"
-            ><span class="logo__text">Web</span>Studio</a
-          >
-          <address class="main-footer__contact-details">
-            <p class="main-footer__address">
-              m. Warszawa, Aleje Jerozolimskie 21
-            </p>
-            <a
-              class="main-footer__link main-footer__link--contact-details"
-              href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+        <div class="main-footer__wrapper">
+          <div class="main-footer__contact-data">
+            <a class="main-footer__link logo logo--footer" href="./index.html"
+              ><span class="logo__text">Web</span>Studio</a
             >
-            <a
-              class="main-footer__link main-footer__link--contact-details"
-              href="tel:+48111111111"
-              >+48 111 111 111</a
-            >
-          </address>
-        </div>
-        <div class="main-footer__social-media">
-          <p class="main-footer__social-media-headline">DOŁĄCZ DO NAS</p>
-          <ul class="social-media-list">
-            <li class="social-media-list__item">
-              <div
-                class="social-media-list__container social-media-list__container--footer"
+            <address class="main-footer__contact-details">
+              <p class="main-footer__address">
+                m. Warszawa, Aleje Jerozolimskie 21
+              </p>
+              <a
+                class="main-footer__link main-footer__link--contact-details"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
               >
-                <svg
-                  class="social-media-list__icon social-media-list__icon--footer"
-                  width="20px"
-                  height="20px"
-                >
-                  <use href="images/icons.svg#icon-instagram-2"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="social-media-list__item">
-              <div
-                class="social-media-list__container social-media-list__container--footer"
+              <a
+                class="main-footer__link main-footer__link--contact-details"
+                href="tel:+48111111111"
+                >+48 111 111 111</a
               >
-                <svg
-                  class="social-media-list__icon social-media-list__icon--footer"
-                  width="20px"
-                  height="20px"
+            </address>
+          </div>
+          <div class="main-footer__social-media">
+            <p class="main-footer__social-media-headline">DOŁĄCZ DO NAS</p>
+            <ul class="social-media-list">
+              <li class="social-media-list__item">
+                <div
+                  class="social-media-list__container social-media-list__container--footer"
                 >
-                  <use href="images/icons.svg#icon-twitter-1"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="social-media-list__item">
-              <div
-                class="social-media-list__container social-media-list__container--footer"
-              >
-                <svg
-                  class="social-media-list__icon social-media-list__icon--footer"
-                  width="20px"
-                  height="20px"
+                  <svg
+                    class="social-media-list__icon social-media-list__icon--footer"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use href="images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="social-media-list__item">
+                <div
+                  class="social-media-list__container social-media-list__container--footer"
                 >
-                  <use href="images/icons.svg#icon-facebook-1"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="social-media-list__item">
-              <div
-                class="social-media-list__container social-media-list__container--footer"
-              >
-                <svg
-                  class="social-media-list__icon social-media-list__icon--footer"
-                  width="20px"
-                  height="20px"
+                  <svg
+                    class="social-media-list__icon social-media-list__icon--footer"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use href="images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="social-media-list__item">
+                <div
+                  class="social-media-list__container social-media-list__container--footer"
                 >
-                  <use href="images/icons.svg#icon-linkedin-1"></use>
-                </svg>
-              </div>
-            </li>
-          </ul>
+                  <svg
+                    class="social-media-list__icon social-media-list__icon--footer"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use href="images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="social-media-list__item">
+                <div
+                  class="social-media-list__container social-media-list__container--footer"
+                >
+                  <svg
+                    class="social-media-list__icon social-media-list__icon--footer"
+                    width="20px"
+                    height="20px"
+                  >
+                    <use href="images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="main-footer__form-newsletter">
           <form class="form-newsletter">

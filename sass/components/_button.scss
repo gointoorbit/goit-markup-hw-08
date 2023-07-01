@@ -32,6 +32,9 @@
   &--close {
     width: 30px;
     height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 
     &:focus-within .button-icon--close__icon {
       fill: $logo-color-first;
@@ -102,11 +105,16 @@
 .button--newsletter {
   width: 200px;
   height: 50px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.96px;
   color: $dark-background-text-color;
   background-color: $logo-color-first;
   padding: 10px 75px 10px 42px;
   position: relative;
+  margin: 0 auto;
+
+  @media #{$desktop} {
+    margin: 0;
+  }
 
   &:hover,
   &:focus {
