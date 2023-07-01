@@ -21,6 +21,7 @@
     }
     @media #{$desktop} {
       gap: 70px;
+      padding-inline: 0;
     }
   }
 
