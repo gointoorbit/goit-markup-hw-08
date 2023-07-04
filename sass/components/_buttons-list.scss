@@ -1,16 +1,36 @@
 .portfolio-content {
-  background-color: $light-background-color;
+  background-color: $header-background-color;
 }
 
 .buttons-part {
-  padding-block: 94px;
+  padding-block: 60px 40px;
+
+  @media #{$tablet} {
+    padding-block: 60px 30px;
+  }
+
+  @media #{$desktop} {
+    padding-block: 94px 50px;
+  }
+
+  &__container {
+    padding-inline: 15px;
+  }
 
   &__buttons-branch-list {
     display: flex;
-    padding: 0 318px 50px 310px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
 
+    @media #{$tablet} {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    /*
     &:first-child {
       margin-left: 0;
     }
+    */
   }
 }
